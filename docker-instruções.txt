@@ -16,3 +16,6 @@ docker-compose run --rm -p 3000:3000 -w /app/my-react-app react-app npm start
 
 Abrir no navegador:
 👉 http://localhost:3000
+
+Entrar no container:
+  docker compose run --rm -w /app react-app bash
