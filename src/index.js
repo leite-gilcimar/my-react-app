@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PrimeReactProvider } from 'primereact/api';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const mountHere = root.shadowRoot;
+
+const options = { 
+  appendTo: mountHere, 
+  styleContainer: mountHere,
+  locale: 'pt-BR'
+};
+
 root.render(
   <React.StrictMode>
-    <App />
+    <PrimeReactProvider value={options}>
+      <App />
+    </PrimeReactProvider>
   </React.StrictMode>
 );
 
