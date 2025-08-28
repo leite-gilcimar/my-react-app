@@ -1,0 +1,22 @@
+services:
+  react-app:
+    build: .
+    container_name: react-app
+    working_dir: /app/my-react-app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "npm install && npm start"
+
+
+
+
+
+

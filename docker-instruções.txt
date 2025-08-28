@@ -1,0 +1,18 @@
+🚀 Como usar
+
+Criar o app React (apenas na primeira vez):
+
+docker-compose run --rm react-app npx create-react-app my-react-app
+
+
+Isso vai criar a pasta my-react-app no mesmo diretório onde estão o Dockerfile e docker-compose.yml.
+
+Rodar a aplicação:
+
+docker-compose run --rm -p 3000:3000 -w /app/my-react-app react-app npm start
+
+
+(ou se quiser fixar isso no docker-compose.yml, dá pra fazer também 😉).
+
+Abrir no navegador:
+👉 http://localhost:3000
