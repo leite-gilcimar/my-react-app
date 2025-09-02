@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { PrimeReactProvider } from 'primereact/api';
+import 'primeicons/primeicons.css';
+import 'primereact/resources/primereact.min.css'; // Core PrimeReact styles
+import 'primeflex/primeflex.css';
+import "primereact/resources/themes/lara-light-teal/theme.css";
+import "primeflex/themes//primeone-dark.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -1,27 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
-import 'primeicons/primeicons.css';
-import "primereact/resources/themes/lara-light-teal/theme.css";
 import { Button } from 'primereact/button';
+import { InputText } from "primereact/inputtext";
+import { SelectButton } from 'primereact/selectbutton';
 
 function App() {
+
+  const options = ['Off', 'On'];
+  const [value, setValue] = useState(options[0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Agora sim <b>;)</b>
-        </p>
-        <Button label="Enviar" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="card flex align-items-center justify-content-center">
+      <div className="flex flex-column gap-2 mr-2">
+        <label htmlFor="username">Username</label>
+        <InputText id="username" aria-describedby="username-help" />
+        <small id="username-help">
+            Enter your username to reset your password...
+        </small>
+      </div>
+      <Button className="mr-2" label="Login" />
+      <SelectButton className="mr-2" value={value} onChange={(e) => setValue(e.value)} options={options} />
     </div>
   );
 }
